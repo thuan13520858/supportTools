@@ -1,0 +1,13 @@
+.functionInfo {
+    text-align: center;
+    border-bottom: 1px solid white;
+    height: 20%;
+    img {
+        filter: invert(1);
+        max-width: 50px;
+    }
+    :global .func-name {
+        color: white;
+        font-size: 18px;
+    }
+}

@@ -3,20 +3,38 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.5",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.6.0",
+    "concurrently": "^3.6.1",
+    "cross-env": "^7.0.3",
+    "electron": "^2.0.7",
+    "electron-builder": "^20.27.1",
+    "electron-is-dev": "^0.3.0",
+    "node-sass": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0",
+    "sweetalert2": "^11.0.18",
+    "wait-on": "^2.1.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"cross-env BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\""
   },
+  "main": "public/main.js",
   "eslintConfig": {
     "extends": [
       "react-app",
